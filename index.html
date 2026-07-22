@@ -304,17 +304,17 @@
 
 <a href="https://wa.me/5492254531229" class="ws-float no-print" target="_blank">💬 CONSULTAS</a>
 
-<!-- CABECERA CON CARRUSEL DE LENCERÍA Y ROPA ÍNTIMA -->
+<!-- CABECERA CON CARRUSEL DE LENCERÍA -->
 <header class="hero-carousel no-print">
     <div class="carousel-track" id="carouselTrack">
         <div class="slide">
-            <img src="https://images.unsplash.com/photo-1596475886680-cf62686b4935?q=80&w=1200&auto=format&fit=crop" alt="Lencería Encaje Fino">
+            <img src="https://images.unsplash.com/photo-1583846783214-7229a91b20ed?auto=format&fit=crop&w=1200&q=80" referrerpolicy="no-referrer" alt="Conjunto de Lencería">
         </div>
         <div class="slide">
-            <img src="https://images.unsplash.com/photo-1583846783214-7229a91b20ed?q=80&w=1200&auto=format&fit=crop" alt="Conjunto de Lencería Luxury">
+            <img src="https://images.unsplash.com/photo-1617396900799-f4ec2b43c7ae?auto=format&fit=crop&w=1200&q=80" referrerpolicy="no-referrer" alt="Lencería de Seda y Encaje">
         </div>
         <div class="slide">
-            <img src="https://images.unsplash.com/photo-1617396900799-f4ec2b43c7ae?q=80&w=1200&auto=format&fit=crop" alt="Detalle Lencería de Seda">
+            <img src="https://images.unsplash.com/photo-1596475886680-cf62686b4935?auto=format&fit=crop&w=1200&q=80" referrerpolicy="no-referrer" alt="Lencería Luxury">
         </div>
     </div>
     <div class="hero-overlay">
@@ -441,10 +441,10 @@
         const g = document.getElementById('main-grid'); 
         g.innerHTML = data.length ? "" : "<p style='grid-column:1/-1; text-align:center; color:var(--text-muted); padding: 50px 0;'>No hay artículos para mostrar.</p>";
         data.forEach(p => {
-            const imgUrl = p.Imagen || 'https://images.unsplash.com/photo-1596475886680-cf62686b4935?q=80&w=400';
+            const imgUrl = p.Imagen || 'https://images.unsplash.com/photo-1596475886680-cf62686b4935?auto=format&fit=crop&w=400&q=80';
             g.innerHTML += `
                 <div class="card" onclick="addToCart(${p.id})">
-                    <div class="img-box"><img src="${imgUrl}" onerror="this.src='https://via.placeholder.com/300x400?text=Sin+Foto'"></div>
+                    <div class="img-box"><img src="${imgUrl}" referrerpolicy="no-referrer" onerror="this.src='https://via.placeholder.com/300x400?text=Sin+Foto'"></div>
                     <div style="font-family:'Cormorant Garamond'; font-style:italic; color:var(--rose-accent); font-size:0.95rem;">${p.Categoria}</div>
                     <div style="font-size:0.65rem; letter-spacing:2px; color:var(--text-muted); font-weight:600; text-transform:uppercase; margin-top:2px;">${p.Marca}</div>
                     <div style="font-family:'Cormorant Garamond'; font-size:1.25rem; margin:4px 0; font-weight:600;">Art. ${p.Articulo}</div>
